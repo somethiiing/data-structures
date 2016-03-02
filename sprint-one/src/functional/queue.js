@@ -18,7 +18,7 @@ var Queue = function() {
       size--;
       for (var key in storage) {
         storage[key] = storage[Number(key) + 1];
-        console.log(storage[0])
+        console.log(storage[0]);
       }
       return temp;
     }
