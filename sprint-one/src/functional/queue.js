@@ -15,10 +15,11 @@ var Queue = function() {
   someInstance.dequeue = function() {
     if (size > 0) {
       var temp = storage[0];
-      for (var key in storage) {
-        storage[key] = storage[key + 1];
-      }
       size--;
+      for (var key in storage) {
+        storage[key] = storage[Number(key) + 1];
+        console.log(storage[0])
+      }
       return temp;
     }
   };
