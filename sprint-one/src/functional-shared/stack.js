@@ -10,10 +10,8 @@ var Stack = function() {
 };
 
 var stackMethods = {
-
   size: function() {
     return this.index;
-    console.log(this);
   },
 
   push: function(value) {
