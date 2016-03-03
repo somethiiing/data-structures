@@ -22,8 +22,10 @@ var stackMethods = {
   },
 
   pop: function() {
-    this[this.index--];
-    return this[this.index];
+    if (this.index > 0) {
+      this[this.index--];
+      return this[this.index];
+    }
   }
 
 };
