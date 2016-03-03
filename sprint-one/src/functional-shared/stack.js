@@ -27,5 +27,4 @@ var stackMethods = {
       return this[this.index];
     }
   }
-
 };
