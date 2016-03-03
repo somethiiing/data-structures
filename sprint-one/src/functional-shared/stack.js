@@ -18,7 +18,7 @@ var stackMethods = {
 
   push: function(value) {
     this[this.index] = value;
-    this[this.index++];
+    this.index++;
   },
 
   pop: function() {
