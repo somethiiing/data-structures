@@ -2,7 +2,6 @@
   // but try not not reference your old code in writing the new style.
 var Stack = function() {
   var instance = Object.create(stackMethods);
-  instance.storage = {};
   instance.index = 0;
 
   return instance;
