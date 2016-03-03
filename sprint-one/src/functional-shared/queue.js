@@ -13,10 +13,12 @@ var queueMethods = {
   size: function() {
     return this.index;
   },
+
   enqueue: function(value) {
     this[this.index] = value;
     this.index++;
   },
+  
   dequeue: function() {
     var temp = this[0];
     for (var key in this) {
@@ -28,3 +30,7 @@ var queueMethods = {
 };
 
 
+// queue.enqueue('a');
+// queue.enqueue('b');
+// queue.dequeue();
+// expect(queue.size()).to.equal(1);
