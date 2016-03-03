@@ -12,6 +12,10 @@ var Queue = function() {
 var queueMethods = {
   size: function() {
     return this.index;
+  },
+  enqueue: function(value) {
+    this[this.index] = value;
+    this.index++;
   }
 };
 
