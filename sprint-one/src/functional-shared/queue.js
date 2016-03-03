@@ -16,6 +16,14 @@ var queueMethods = {
   enqueue: function(value) {
     this[this.index] = value;
     this.index++;
+  },
+  dequeue: function() {
+    var temp = this[0];
+    for (var key in this) {
+      this[key] = this[Number(key) + 1];
+    }
+    this.index--;
+    return temp;
   }
 };
 
