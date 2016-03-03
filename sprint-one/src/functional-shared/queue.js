@@ -23,7 +23,7 @@ var queueMethods = {
     if (this.index > 0) {
       var temp = this[0];
       for (var key in this) {
-        if (Number(key)) {
+        if (Number(key) >= 0) {
           this[key] = this[Number(key) + 1];
         }
       }
@@ -32,9 +32,3 @@ var queueMethods = {
     }
   }
 };
-
-
-// queue.enqueue('a');
-// queue.enqueue('b');
-// queue.dequeue();
-// expect(queue.size()).to.equal(1);
