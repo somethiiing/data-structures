@@ -13,7 +13,15 @@ var stackMethods = {
 
   size: function() {
     return this.index;
+  },
+
+  push: function(value) {
+    this[this.index] = value;
+    this[this.index++] ;
   }
 
 };
 
+stack.push('a');
+stack.push('b');
+expect(stack.size()).to.equal(2);
