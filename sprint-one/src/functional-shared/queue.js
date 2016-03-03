@@ -20,14 +20,16 @@ var queueMethods = {
   },
 
   dequeue: function() {
-    var temp = this[0];
-    for (var key in this) {
-      if (Number(key)) {
-        this[key] = this[Number(key) + 1];
+    if (this.index > 0) {
+      var temp = this[0];
+      for (var key in this) {
+        if (Number(key)) {
+          this[key] = this[Number(key) + 1];
+        }
       }
+      this.index--;
+      return temp;
     }
-    this.index--;
-    return temp;
   }
 };
 
