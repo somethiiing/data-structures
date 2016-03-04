@@ -39,6 +39,7 @@ treeMethods.contains = function(target) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
- */
+  addChild - O(n)
+  contains - O(n)
 
-// var tree = Tree();
+ */
