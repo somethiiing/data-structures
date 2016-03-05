@@ -30,7 +30,23 @@ var binarySearchTreeMethods = {
   },
   contains: function(value) {
     //return a boolean
-    
+    // var findValue = function(node) {
+    //   if (this.value > node.value) {
+    //     if (this.left === value) {
+    //       return true;
+    //     } else {
+    //       findValue.call(this.left);
+    //     }
+    //   } else if (this.value < node.value) {
+    //     if (this.right === null) {
+    //       return true;
+    //     } else {
+    //       placeNode.call(this.right);
+    //     }
+    //   }
+    //   return false;
+    // };
+    // findValue.call(this);
   },
   depthFirstLog: function(cb) {
     //maps callback to each value in tree
