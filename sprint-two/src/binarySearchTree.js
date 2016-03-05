@@ -21,7 +21,7 @@ var binarySearchTreeMethods = {
           this.right = newNode;
         } else {
           placeNode.call(this.right, node);
-        }
+        }    
       }
     };
 
@@ -29,24 +29,18 @@ var binarySearchTreeMethods = {
 
   },
   contains: function(value) {
-    //return a boolean
-    // var findValue = function(node) {
-    //   if (this.value > node.value) {
-    //     if (this.left === value) {
-    //       return true;
-    //     } else {
-    //       findValue.call(this.left);
-    //     }
-    //   } else if (this.value < node.value) {
-    //     if (this.right === null) {
-    //       return true;
-    //     } else {
-    //       placeNode.call(this.right);
-    //     }
-    //   }
-    //   return false;
-    // };
-    // findValue.call(this);
+    var findValue = function (node) {
+      if (node === null) {
+        return false;
+      } else if (node.value === value) {
+        return true;
+      } else if (value < node.value) {
+        return findValue(node.left);
+      } else if (value > node.value) {
+        return findValue(node.right);
+      }
+    };
+    return findValue(this);
   },
   depthFirstLog: function(cb) {
     //maps callback to each value in tree
@@ -60,7 +54,6 @@ var createNode = function(value, inheritsFrom) {
   instance.value = value;
   return instance;
 };
-
 
 /*
  * Complexity: What is the time complexity of the above functions?
