@@ -43,7 +43,19 @@ var binarySearchTreeMethods = {
     return findValue(this);
   },
   depthFirstLog: function(cb) {
-    //maps callback to each value in tree
+    
+    var mapBinary = function(node) {
+      if (node === null) {
+        return;
+      } else {
+        cb(node.value);
+      }
+
+      mapBinary(node.left);
+      mapBinary(node.right);
+    };
+
+    mapBinary(this);
   },
   left: null,
   right: null
@@ -54,6 +66,8 @@ var createNode = function(value, inheritsFrom) {
   instance.value = value;
   return instance;
 };
+
+
 
 /*
  * Complexity: What is the time complexity of the above functions?
